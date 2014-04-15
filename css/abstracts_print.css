@@ -1,0 +1,76 @@
+/********************************************************
+ *
+ *	phpAbstracts
+ *  http://www.phpabstracts.com
+ *
+ *  For copyright and license information, see readme.txt
+ *
+*********************************************************/
+
+
+
+/************************/
+/****** DETAIL.PHP ******/
+/************************/
+
+body {
+	background-color:white;
+}
+
+.midfont { 
+	font-size:11px;
+	line-height:16px;
+}
+
+.centering_container {
+	width:auto;	
+	padding:0px;
+}
+
+#detail_content {
+	float:none;
+	width:auto;
+	padding:0px;
+}
+
+.sidebar {
+	margin-top:15px;
+	float:none;
+	width:auto;
+	background-color:white;
+	padding:0px;
+	border-top:2px dashed black;
+}
+
+.sidebar .header {
+	background-color:white;
+	background:none;
+	font-size:18px;
+	margin-bottom:15px;
+	width:auto;
+	margin-left:0px;
+	margin-right:0px;
+	text-align:left;
+}	
+
+.sidebar {
+	display:none;
+	visibility:hidden;
+}
+
+#print_only {
+	display:block;
+	visibility:visible;
+	border-top:1px dotted gray;
+	margin-top:16px;
+	padding: 16px 0px 0px 0px;
+}
+
+#raise_header {
+	display:none;
+	visibility:hidden;
+}
+
+#main_container {
+	border:0px;
+}

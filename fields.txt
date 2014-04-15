@@ -1,0 +1,10 @@
+name varchar(60)
+email varchar(60)
+title varchar(250)
+duration varchar(40)
+summary text
+gap text
+need text
+change text 
+presentation varchar(100)
+disclosure varchar(100)

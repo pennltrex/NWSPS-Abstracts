@@ -1,0 +1,441 @@
+/********************************************************
+ *
+ *	phpAbstracts
+ *  http://www.phpabstracts.com
+ *
+ *  For copyright and license information, see readme.txt
+ *
+*********************************************************/
+
+
+/*******************/
+/****** FONTS ******/
+/*******************/
+
+body, table, tr, td, option, select {
+	/* default font */
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	color:black;
+}
+
+.midfont {
+	line-height:20px;
+	font-size:12px;
+}
+
+.small {
+	color:#999999;
+	font-size:10px;
+	padding-top:10px;
+}  
+
+.footer, .footer a {
+	margin-bottom:10px;
+	font-size:10px;
+	color:#999999;
+}
+
+a {
+	color: #005172;
+}
+
+a:hover {
+	color:#B06F00;
+}
+
+h1 {
+	margin:0px;
+	padding:0px;
+	padding-bottom:10px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:25px;
+	font-weight:normal;
+	color:#990000;
+}
+
+h2 {
+	margin:0px;
+	padding:0px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:16px;
+	font-weight:normal;
+	color:#005172;
+}
+
+.breadcrumbs, .breadcrumbs a {
+	color:#666666;
+	margin-bottom:20px;
+}
+
+p {
+	line-height:18px;
+}
+
+
+
+/*************************/
+/****** POSITIONING ******/
+/*************************/
+
+body {
+	/* background color */
+	background-color: #eee3c5;
+	/* center page */
+	margin:0px;
+	text-align: center;
+}
+
+/* container to center entire page, but not text */
+.centering_container {
+	margin-left: auto;
+	margin-right: auto;
+	text-align: left;
+	width:875px;	
+	padding:20px;
+	background-color:white;
+}
+
+.top_container { 
+	margin-left: auto;
+	margin-right: auto;
+	text-align: left;
+	width:875px;	
+	padding:20px;
+	padding-top:20px;
+	padding-bottom:20px;
+	position:relative;
+}	
+
+#main_container {
+	border:1px solid #c7b299;
+}
+
+#print_only {
+	display:none;
+	visibility:hidden;
+}
+
+.title_header {
+	position:absolute;
+	top:20px;
+	right:10px;
+	text-align:right;
+}
+
+.leftcol {
+	padding:20px;
+	width:600px;
+	background-color:#f4efe5;
+	float:left;
+}
+
+.rightcol {
+	width:180px;
+	padding:20px;
+	background-color:#eeeeee;
+	float:right;
+}
+
+.breaker {
+	clear:both;
+}
+
+
+/*******************/
+/****** FORMS ******/
+/*******************/
+.aform input, .aform textarea {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:11px;
+	color:black;
+	float:left;
+	padding:2px;
+}
+
+.aform input.hidden {
+	float:none;
+	padding:0px;
+}
+
+.aform label {
+	display:block;
+	width:150px;
+	height:25px;
+	padding:2px;
+	padding-right:25px;
+	float:left;
+	text-align:right;
+	color:black;
+}
+
+.aform input {
+	display:block;
+	float:left;
+}
+
+.aform br {
+	clear:both;
+}
+
+.aform h3 {
+	font-size:12px;
+	font-weight:normal;
+	color:#005172;
+	background-color:#fbf7ec;
+	width:100%;
+	padding:3px;
+	margin-top:10px;
+}
+
+.aform .suggested_words {
+	color:#666666;
+	padding-top:10px;
+	display:block;
+	font-size:9px;
+}
+
+
+.aform .your_words {
+	color:#009900;
+	padding-top:10px;
+	display:block;
+	font-size:9px;
+}
+
+.aform p {
+	line-height:normal;
+	padding-top:5px;
+	padding-bottom:10px;
+	width:650px;
+}
+
+
+
+
+
+
+/**********************/
+/****** LIST.PHP ******/
+/**********************/
+
+
+table.sortable thead th {
+    background-color: #005172;
+	background:url(../images/header_bg_blue.gif) top left;
+    color: white;
+    font-weight:bold;
+    cursor: pointer;
+	padding:5px 5px 5px 5px;
+	font-size:11px;
+	text-align:left;
+	border:0px;
+}
+
+table.sortable td {
+	padding:10px 5px 10px 5px;
+	border-bottom:1px solid #eeeeee;
+	vertical-align:top;
+}
+
+table.sortable a {
+	border:1px solid #005172;
+	color:#005172;
+	padding:4px;
+	text-decoration:none;
+	font-size:11px;
+}
+
+table.sortable a:hover {
+	background-color:#005172;
+	border:1px solid #005172;
+	color:white;
+}
+
+tr.ruled {
+	background:#eeeeee;
+}
+
+.detail_Review { 
+	border:1px solid #006793;
+	color:#006793;
+	border-color:#006793; 
+	padding:2px;
+	text-decoration:none;
+	font-size:11px;
+	background-color:white;
+}
+
+.detail_Review:hover { 
+	background-color:#006793;
+	border-color:#006793;
+	color:white;	
+}
+
+.detail_View { 
+	border:1px solid #b26f00;
+	color:#b26f00;
+	border-color:#b26f00; 
+	padding:2px;
+	text-decoration:none;
+	font-size:11px;
+	background-color:white;
+}
+
+.detail_View:hover { 
+	background-color:#b26f00;
+	border-color:#b26f00;
+	color:white;	
+}
+
+
+.master_column {
+	width:165px;
+	float:left;
+	text-align:left;
+	padding:5px 15px 0px 25px;
+}
+
+#filters {
+	text-align:right; 
+	background-color:#f8f8f8;
+	border:1px solid #cccccc;
+	padding:5px;
+	display:none;
+	visibility:hidden;
+}
+
+
+/************************/
+/****** DETAIL.PHP ******/
+/************************/
+
+#detail_content {
+	float:left;
+	width:580px; 
+	padding-right:50px;
+}
+
+
+.sidebar {
+	float:right; 
+	width:200px; 
+	padding:0px 15px 15px 15px; 
+	background-color:#f1e3c3;
+	line-height:16px;
+	
+	//background-color:#f4efe5;
+	
+}
+	
+.sidebar .header {
+	background-color:#b26f00;
+	background:url(../images/header_bg.gif) top left;
+	padding:5px 0px 5px 0px;
+	display:block;
+	color:white;
+	font-size:14px;
+	line-height:18px;
+	margin-bottom:15px;
+	width:230px;
+	margin-left:-15px;
+	margin-right:-15px;
+	text-align:center;
+	border-top: 10px solid white;
+}	
+
+.indented {
+	padding-left:10px;
+}
+
+.author_info_div {
+	border:1px dotted gray;
+	border-width:1px 0px;
+	padding:5px;
+	display:block;
+	background-color:#f6f6f6;
+}
+ 
+ 
+.sidebar .submit {
+	border:1px solid #006793;
+	color:#006793;
+	border-color:#006793; 
+	padding:2px;
+	text-decoration:none;
+	font-size:11px;
+	background-color:white;
+}
+
+.sidebar input.submit:hover { 
+	background-color:#006793;
+	border-color:#006793;
+	color:white;	
+}
+
+.review_indent {
+	right:-50px;
+	position:relative;
+}
+
+
+.divider_line {
+	color:#993300;
+	background-color:#993300;
+	height:1px;
+	border:0px;
+}
+
+/**************************/
+/****** STATUS BOXES ******/
+/**************************/
+
+.statusbox {
+	display:block;
+	width:320px;
+	background-color:#fdffea;
+	background-image:url(../images/checkmark_big.gif);
+	background-position: center left;
+	background-repeat: no-repeat;
+	height: 60px;
+	padding:20px;
+	padding-left:115px;
+	border:1px solid #B06F00;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+
+
+/*******************/
+/****** OTHER ******/
+/*******************/
+
+.overallscore { 
+	padding:5px;
+	font-size:13px;
+	border:1px solid #B06F00;
+	background-color:#fdffea;
+	text-align:center;
+}
+
+hr {
+	height:1px;
+	margin-top:10px;
+	margin-bottom:10px;
+}
+
+.goback {
+	border-top:1px dotted gray;
+	border-bottom:1px dotted gray;
+	padding:5px;
+	display:block;
+	padding-bottom:7px;
+}
+
+
+.status {
+	font-weight:bold;
+	color:#9e0b0f;
+}

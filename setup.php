@@ -68,11 +68,45 @@ mysql_query("CREATE TABLE `abstracts` (
 	`last_edit` varchar(50) NOT NULL, 
 	PRIMARY KEY  (`abstract_id`)
 	) 
-ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1418 ;");			
+ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1418 ;");			
 								
-								mysql_query("CREATE TABLE `reviews` (  `review_id` int(11) NOT NULL auto_increment,  `abstract_id` int(11) NOT NULL default '0',  `user_id` int(11) NOT NULL default '0',  `status` varchar(20) NOT NULL,  `relevance` varchar(15) NOT NULL default '0',  `quality` varchar(15) NOT NULL default '0',  `comments` text NOT NULL,  `recommendation` varchar(25) NOT NULL,  PRIMARY KEY  (`review_id`)) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=749 ;");
+								mysql_query("CREATE TABLE `reviews` (  `review_id` int(11) NOT NULL auto_increment,  `abstract_id` int(11) NOT NULL default '0',  `user_id` int(11) NOT NULL default '0',  `status` varchar(20) NOT NULL,  `relevance` varchar(15) NOT NULL default '0',  `quality` varchar(15) NOT NULL default '0',  `comments` text NOT NULL,  `recommendation` varchar(25) NOT NULL,  PRIMARY KEY  (`review_id`)) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=749 ;");
 
-								mysql_query("CREATE TABLE `users` (  `user_id` int(11) NOT NULL auto_increment,  `login` varchar(40) NOT NULL default '',  `password` varchar(40) NOT NULL default '',  `name` varchar(75) NOT NULL default '',  `email` varchar(40) NOT NULL default '',  `role` varchar(10) NOT NULL default '',  PRIMARY KEY  (`user_id`)) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=62 ;");
+								mysql_query("CREATE TABLE `users` (  `user_id` int(11) NOT NULL auto_increment,  `login` varchar(40) NOT NULL default '',  `password` varchar(40) NOT NULL default '',  `name` varchar(75) NOT NULL default '',  `email` varchar(40) NOT NULL default '',  `role` varchar(10) NOT NULL default '',  PRIMARY KEY  (`user_id`)) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=62 ;");
+								
+								mysql_query("CREATE TABLE `disclosure` (
+	`disclosure_id` int(11) NOT NULL auto_increment,
+	`activity` varchar(100) NOT NULL default '',
+	`activity_date` varchar(40) NOT NULL default '',
+	`activity_role` varchar(90) NOT NULL default '',
+	`interest` int(1) NOT NULL default '',
+	`commercial_prod` int(1) NOT NULL default '',
+	`signature` varchar(80) NOT NULL default '',
+	`sig_date` varchar(40) NOT NULL default ''
+	PRIMARY KEY (`disclosure_id`)
+	)
+ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1;");
+								
+								mysql_query("CREATE TABLE `interest` (
+	`interest_id` int(11) NOT NULL auto_increment,
+	`disclosure_id` int(11) NOT NULL,
+	`interest` varchar(100) NOT NULL default '',
+	`compensation` varchar(100) NOT NULL default '',
+	`role` text NOT NULL default '',
+	PRIMARY KEY (`interest_id`)
+	FOREIGN KEY (disclosure_id) REFERENCES disclosure (disclosure_id)
+	)
+ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1;");
+								
+								mysql_query("CREATE TABLE `commercial_product` (
+	`commercial_prod_id` int(11) NOT NULL auto_increment,
+	`disclosure_id` int(11) NOT NULL,
+	`product` varchar(120) NOT NULL default '',
+	`description` text NOT NULL default '',
+	PRIMARY KEY (`commerical_prod_id`)
+	FOREIGN KEY (disclosure_id) REFERENCES disclosure (disclosure_id)
+	)
+ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1;");
 								
 								mysql_query("INSERT INTO `users` VALUES (1, '".addslashes($_POST['admin_user'])."', '" . 
 									addslashes($_POST['admin_pass']) . "', 'Administrator', '" . 

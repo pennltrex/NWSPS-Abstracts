@@ -102,7 +102,7 @@
             		<li>Use good and standardized before and after photos.</li>
             		<li>Don’t read from your slides.</li>
             		<li>A good picture is worth a thousand words.</li>
-            		<li>Keep graphs simple; remember we’re surgeons.</li>
+            		<li>Keep graphs simple; remember we're surgeons.</li>
             		<li>Ensure your talk with remain on time.</li>
             	<ol>
             
@@ -124,12 +124,12 @@
             
             <p>Brief summary of presentation:</p>
             
-            <label for="summary">
+            <!--label for="summary">
                 <span class="suggested_words">Suggested<br /><?php echo $summary_words_limit; ?> words</span>
                 <span id="summary_your_words" class="your_words">
                     Your count<br /><span id="summary_words">0</span> words
                 </span>
-            </label>
+            </label-->
             <textarea name="summary" wrap="hard" cols="60" rows="10" 
             onkeyup="check_length(this, gap, need, change, <?php echo $summary_words_limit; ?>);" 
             onkeydown="check_length(this, gap, need, change, <?php echo $summary_words_limit; ?>);" 
@@ -138,12 +138,12 @@
             
             <p>What is the practice based issue you want to address?</p>
             
-            <label for="gap">
+            <!--label for="gap">
                 <span class="suggested_words">Suggested<br /><?php echo $gap_words_limit; ?> words</span>
                 <span id="gap_your_words" class="your_words">
                     Your count<br /><span id="gap_words">0</span> words
                 </span>
-            </label>
+            </label-->
             <textarea name="gap" wrap="hard" cols="60" rows="10" 
             onkeyup="check_length(this, summary, need, change, <?php echo $gap_words_limit; ?>);" 
             onkeydown="check_length(this, summary, need, change, <?php echo $gap_words_limit; ?>);" 
@@ -152,12 +152,12 @@
             
             <p>Why does that issue exist? (need)</p>
             
-            <label for="need">
+            <!--label for="need">
                 <span class="suggested_words">Suggested:<br /><?php echo $need_words_limit; ?> words</span>
                 <span id="need_your_words" class="your_words">
                     Your count:<br /><span id="need_words">0</span> words
                 </span>
-            </label>
+            </label-->
             <textarea name="need" wrap="hard" cols="60" rows="12" 
             onkeyup="check_length(this, summary, gap, change, <?php echo $need_words_limit; ?>);" 
             onkeydown="check_length(this, summary, gap, change, <?php echo $need_words_limit; ?>);" 
@@ -166,12 +166,12 @@
             
             <p>What do we want to change? (How are we going to approach the management of patients differently?)</p>
             
-            <label for="change">
+            <!--label for="change">
                 <span class="suggested_words">Suggested<br /><?php echo $change_words_limit; ?> words</span>
                 <span id="change_your_words" class="your_words">
                     Your count<br /><span id="change_words">0</span> words
                 </span>
-            </label>
+            </label-->
             <textarea name="change" wrap="hard" cols="60" rows="15" 
             onkeyup="check_length(this, summary, gap, need, <?php echo $change_words_limit; ?>);" 
             onkeydown="check_length(this, summary, gap, need, <?php echo $change_words_limit; ?>);" 
@@ -185,11 +185,11 @@
             
             <span style="padding:0px 20px 0px 20px;"> | </span>
 
-            <span id="total_words_remaining" style="color:#009900;">
+            <!--span id="total_words_remaining" style="color:#009900;">
                 Your Total: <span id="words_remaining">0</span> words
             </span>
             
-            <input type="hidden" id="word_count" name="word_count" value="0" />
+            <input type="hidden" id="word_count" name="word_count" value="0" /-->
             
             <br /><br />
             
@@ -197,7 +197,7 @@
         
         <h3>Presentation Upload</h3>
         
-        <p>All Presentations:​
+        <p>All Presentations:
         	<ol>
         		<li>Must be in Microsoft PowerPoint or Apple Keynote.</li>
 				<li>Must include a financial disclosure slide.</li>
